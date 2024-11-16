@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body class="font-poppins">
+    <!-- Header Start -->
+    <header
+      class="bg-white top-0 left-0 fixed w-full items-center z-10 shadow-md shadow-white border"
+    >
+      <div class="container">
+        <div
+          class="w-full flex flex-wrap justify-between mt-2 hidden block lg:flex items-center"
+        >
+          <div class="flex flex-1">
+            <a class="mr-5 text-sm text-slate-600" href="">FAQ</a>
+            <a class="text-sm text-slate-600" href="">PARTNER WITH MYUS</a>
+          </div>
+          <div class="border border-sky-950 rounded-sm">
+            <a href="" class="px-4 py-2 text-sm text-sky-950">SIGN IN</a>
+          </div>
+          <div class="ms-5">
+            <div class="max-w-screen-md sm:text-center">
+              <form action="#">
+                <div
+                  class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0"
+                >
+                  <div class="relative w-full">
+                    <label
+                      for="search"
+                      class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      >Email address</label
+                    >
+                    <div
+                      class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+                    >
+                      <svg
+                        class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                        />
+                      </svg>
+                    </div>
+                    <input
+                      class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                      placeholder="Search"
+                      type="search"
+                      id="search"
+                      name="search"
+                    />
+                  </div>
+                  <div>
+                    <button
+                      type="submit"
+                      class="py-3 px-5 w-full text-sm font-medium text-center text-black rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                    >
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-2 block lg:flex hidden" />
+      <div class="container">
+        <div
+          class="flex items-center justify-between relative text-2xl font-semibold mb-5 mt-3 lg:hidden"
+        >
+          <div
+            class="bg-white rounded-sm border border-sky-950 flex hover:opacity-80"
+          >
+            <a href="" class="text-sky-950 px-4 py-2 lg:px-0">SIGN IN</a>
+          </div>
+          <div
+            class="flex bg-yellow-500 rounded-sm border border-black hover:opacity-80"
+          >
+            <a href="" class="px-4 py-2 hover:opacity-80">SIGN UP</a>
+          </div>
+        </div>
+        <div class="flex items-center justify-between relative mt-2 mb-2">
+          <div class="">
+            <a href="" class="text-2xl font-medium">MyUS.com</a>
+          </div>
+          <div class="flex items-center">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:text-sm"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="lg:text-slate-500 text-base text-black py-2 mx-5 flex group-hover:text-sky-950"
+                    >HOW IT WORKS</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base lg:text-slate-500 text-black py-2 mx-5 flex group-hover:text-sky-950"
+                    >WHY CHOOSE MYUS</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-black py-2 lg:text-slate-500 mx-5 flex group-hover:text-sky-950"
+                    >SHIPPING RATES</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-black py-2 mx-5 flex group-hover:text-sky-950 lg:text-slate-500"
+                    >SHOP WITH MYUS</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base lg:text-slate-500 text-black py-2 mx-5 flex group-hover:text-sky-950 lg:hidden"
+                    >FAQ</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-black py-2 lg:text-slate-500 mx-5 flex group-hover:text-sky-950 lg:hidden"
+                    >PARTNER WITH MYUS</a
+                  >
+                </li>
+                <div
+                  class="flex items-center bg-yellow-500 rounded-sm border border-black hidden lg:flex"
+                >
+                  <a href="" class="px-8 font-medium py-2">Sign Up</a>
+                </div>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section
+      id="#home"
+      class="pt-36 bg-sky-950 text-white lg:bg-white lg:text-sky-950"
+    >
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1
+              class="text-4xl font-bold mb-6 text-center lg:text-left lg:text-4xl"
+            >
+              Shop US & UK Stores,
+              <span class="block">Ship Worldwide</span>
+            </h1>
+            <div class="font-medium text-lg lg:leading-10">
+              <div class="flex items-center">
+                <i data-feather="check-circle" class="text-green-700"></i>
+                <p class="ps-2">Free US and UK shipping addresses</p>
+              </div>
+              <div class="flex items-center">
+                <i data-feather="check-circle" class="text-green-700"></i>
+                <p class="ps-2">
+                  Low shipping rates with TruePrice upfront pricing
+                </p>
+              </div>
+              <div class="flex items-center">
+                <i data-feather="check-circle" class="text-green-700"></i>
+                <p class="ps-2">Save up t0 80% with package bundling</p>
+              </div>
+              <div class="flex items-center">
+                <i data-feather="check-circle" class="text-green-700"></i>
+                <p class="ps-2">Shop US sales tax-free</p>
+              </div>
+              <div class="flex items-center mb-8">
+                <i data-feather="check-circle" class="text-green-700"></i>
+                <p class="ps-2">6 million mambers served worldwide</p>
+              </div>
+              <div class="text-center lg:text-left lg:flex lg:items-center">
+                <a
+                  href=""
+                  class="bg-yellow-500 px-9 py-2 rounded-sm font-semibold text-xl lg:mr-10 text-black lg:border-[1px] border-black hover:opacity-80"
+                  >Sign Up</a
+                >
+                <a
+                  href=""
+                  class="block mt-7 lg:mt-0 underline font-normal hover:opacity-80"
+                  >Learn more &raquo;</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="w-full self-end px-4 lg:w-1/2 pb-10">
+            <div
+              class="block mt-10 rounded-full shadow-lg shadow-sky-950 hidden lg:flex bg-sky-950"
+            >
+              <img
+                src="img/f-2-removebg-preview.png"
+                class="max-w-full mx-auto rounded-full"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- MyUS Works Section Start -->
+    <section class="pt-36 pb-10">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <h4
+            class="text-center text-3xl mb-9 text-sky-950 font-semibold w-full"
+          >
+            How MyUS Works
+          </h4>
+          <div
+            class="w-full px-4 mb-10 lg:flex lg:items-center lg:text-center lg:text-sm"
+          >
+            <div class="flex items-center lg:block lg:mr-6 mb-6">
+              <img
+                width="150"
+                src="img/img-1.png"
+                alt=""
+                class="pr-5 mx-auto"
+              />
+              <p class="lg:pt-6 lg:text-slate-700">
+                Join MyuS and get US and UK shipping addresses, low
+                international shipping rates, and more!
+              </p>
+            </div>
+            <div class="flex items-center lg:block lg:mr-6 mb-6">
+              <img
+                width="150"
+                src="img/payment-4.png"
+                alt=""
+                class="pr-5 mx-auto"
+              />
+              <p class="lg:pt-6 lg:text-slate-700">
+                Shop all your favorite US and UK stores and send your purchases
+                to a MyUS facility.
+              </p>
+            </div>
+            <div class="flex items-center lg:block lg:mr-6 mb-6">
+              <img width="150" src="img/pc-1.png" alt="" class="pr-5 mx-auto" />
+              <p class="lg:pt-6 lg:text-slate-700">
+                We receive your packages and save you up to 80% by combining
+                them into one shipment.
+              </p>
+            </div>
+            <div class="flex items-center lg:block lg:mr-6 mb-6">
+              <img width="150" src="img/d-1.png" alt="" class="pr-5 mx-auto" />
+              <p class="lg:pt-6 lg:text-slate-700">
+                Your purchases are delivered directly to your doorstep in as
+                fast as two days.
+              </p>
+            </div>
+          </div>
+          <div class="text-center mt-7 lg:mt-5 lg:block w-full">
+            <a
+              href=""
+              class="bg-sky-950 text-lg lg:px-4 lg:py-3 text-white p-4 rounded-sm hover:opacity-80"
+              >Learn More</a
+            >
+          </div>
+          <div class="text-center mt-16 w-full pb-8 lg:px-20">
+            <h2 class="text-2xl text-sky-950 font-semibold lg:text-2xl">
+              Shop US SALES TAX-FREE at Thousand pf Stores
+            </h2>
+            <p class="p-4 lg:text-lg lg:text-slate-700">
+              Click your favorite store below or
+              <a href="" class="underline text-sky-950"
+                >visit our stores page</a
+              >
+              to learn how MyUS can help you ship from the US and UK. MyUS ships
+              <span class="font-semibold lg:text-slate-700"
+                >to more than 220 countries and territories </span
+              >, with happy members around the globe --- from Saudi Arabia,
+              Australia, Japan, Angola and Canada to the United Arab Emirates,
+              South Africa, India, Brazil and beyond!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MyUS Works Section End -->
+
+    <!-- Gallery Section Start -->
+    <section class="pb-10">
+      <div class="container">
+        <div
+          class="flex flex-wrap lg:justify-center justify-center gap-2 lg:w-5/6 lg:mx-auto lg:gap-2"
+        >
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3 text-black bg-[#fcb900]"
+          >
+            <a href="" class="">
+              <svg
+                class="fill-current"
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Amazon</title>
+                <path
+                  d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726a17.617 17.617 0 01-10.951-.577 17.88 17.88 0 01-5.43-3.35c-.1-.074-.151-.15-.151-.22 0-.047.021-.09.051-.13zm6.565-6.218c0-1.005.247-1.863.743-2.577.495-.71 1.17-1.25 2.04-1.615.796-.335 1.756-.575 2.912-.72.39-.046 1.033-.103 1.92-.174v-.37c0-.93-.105-1.558-.3-1.875-.302-.43-.78-.65-1.44-.65h-.182c-.48.046-.896.196-1.246.46-.35.27-.575.63-.675 1.096-.06.3-.206.465-.435.51l-2.52-.315c-.248-.06-.372-.18-.372-.39 0-.046.007-.09.022-.15.247-1.29.855-2.25 1.82-2.88.976-.616 2.1-.975 3.39-1.05h.54c1.65 0 2.957.434 3.888 1.29.135.15.27.3.405.48.12.165.224.314.283.45.075.134.15.33.195.57.06.254.105.42.135.51.03.104.062.3.076.615.01.313.02.493.02.553v5.28c0 .376.06.72.165 1.036.105.313.21.54.315.674l.51.674c.09.136.136.256.136.36 0 .12-.06.226-.18.314-1.2 1.05-1.86 1.62-1.963 1.71-.165.135-.375.15-.63.045a6.062 6.062 0 01-.526-.496l-.31-.347a9.391 9.391 0 01-.317-.42l-.3-.435c-.81.886-1.603 1.44-2.4 1.665-.494.15-1.093.227-1.83.227-1.11 0-2.04-.343-2.76-1.034-.72-.69-1.08-1.665-1.08-2.94l-.05-.076zm3.753-.438c0 .566.14 1.02.425 1.364.285.34.675.512 1.155.512.045 0 .106-.007.195-.02.09-.016.134-.023.166-.023.614-.16 1.08-.553 1.424-1.178.165-.28.285-.58.36-.91.09-.32.12-.59.135-.8.015-.195.015-.54.015-1.005v-.54c-.84 0-1.484.06-1.92.18-1.275.36-1.92 1.17-1.92 2.43l-.035-.02zm9.162 7.027c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5a8.094 8.094 0 011.612-.24c.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.099.228.099.39v.15c0 .51-.149 1.11-.424 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3 animate-bounce text-red-500"
+          >
+            <a href="" class="">
+              <svg
+                class="fill-current"
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>eBay</title>
+                <path
+                  d="M6.056 12.132v-4.92h1.2v3.026c.59-.703 1.402-.906 2.202-.906 1.34 0 2.828.904 2.828 2.855 0 .233-.015.457-.06.668.24-.953 1.274-1.305 2.896-1.344.51-.018 1.095-.018 1.56-.018v-.135c0-.885-.556-1.244-1.53-1.244-.72 0-1.245.3-1.305.81h-1.275c.136-1.29 1.5-1.62 2.686-1.62 1.064 0 1.995.27 2.415 1.02l-.436-.84h1.41l2.055 4.125 2.055-4.126H24l-3.72 7.305h-1.346l1.07-2.04-2.33-4.38c.13.255.2.555.2.93v2.46c0 .346.01.69.04 1.005H16.8a6.543 6.543 0 01-.046-.765c-.603.734-1.32.96-2.32.96-1.48 0-2.272-.78-2.272-1.695 0-.15.015-.284.037-.405-.3 1.246-1.36 2.086-2.767 2.086-.87 0-1.694-.315-2.2-.93 0 .24-.015.494-.04.734h-1.18c.02-.39.04-.855.04-1.245v-1.05h-4.83c.065 1.095.818 1.74 1.853 1.74.718 0 1.355-.3 1.568-.93h1.24c-.24 1.29-1.61 1.725-2.79 1.725C.95 15.009 0 13.822 0 12.232c0-1.754.982-2.91 3.116-2.91 1.688 0 2.93.886 2.94 2.806v.005zm9.137.183c-1.095.034-1.77.233-1.77.95 0 .465.36.97 1.305.97 1.26 0 1.935-.69 1.935-1.814v-.13c-.45 0-.99.006-1.484.022h.012zm-6.06 1.875c1.11 0 1.876-.806 1.876-2.02s-.768-2.02-1.893-2.02c-1.11 0-1.89.806-1.89 2.02s.765 2.02 1.875 2.02h.03zm-4.35-2.514c-.044-1.125-.854-1.546-1.725-1.546-.944 0-1.694.474-1.815 1.546z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3 text-orange-500"
+          >
+            <a href="" class="">
+              <svg
+                class="fill-current"
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Etsy</title>
+                <path
+                  d="M8.559 2.445c0-.325.033-.52.59-.52h7.465c1.3 0 2.02 1.11 2.54 3.193l.42 1.666h1.27c.23-4.728.43-6.784.43-6.784s-3.196.36-5.09.36H6.635L1.521.196v1.37l1.725.326c1.21.24 1.5.496 1.6 1.606 0 0 .11 3.27.11 8.64 0 5.385-.09 8.61-.09 8.61 0 .973-.39 1.333-1.59 1.573l-1.722.33V24l5.13-.165h8.55c1.935 0 6.39.165 6.39.165.105-1.17.75-6.48.855-7.064h-1.2l-1.284 2.91c-1.005 2.28-2.476 2.445-4.11 2.445h-4.906c-1.63 0-2.415-.64-2.415-2.05V12.8s3.62 0 4.79.096c.912.064 1.463.325 1.76 1.598l.39 1.695h1.41l-.09-4.278.192-4.305h-1.391l-.45 1.89c-.283 1.244-.48 1.47-1.754 1.6-1.666.17-4.815.14-4.815.14V2.45h-.05z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3"
+          >
+            <a href="" class="">
+              <svg
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Apple</title>
+                <path
+                  d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3 text-[#ff7337]"
+          >
+            <a href="" class="">
+              <svg
+                class="fill-current"
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Shopee</title>
+                <path
+                  d="M15.9414 17.9633c.229-1.879-.981-3.077-4.1758-4.0969-1.548-.528-2.277-1.22-2.26-2.1719.065-1.056 1.048-1.825 2.352-1.85a5.2898 5.2898 0 0 1 2.8838.89c.116.072.197.06.263-.039.09-.145.315-.494.39-.62.051-.081.061-.187-.068-.281-.185-.1369-.704-.4149-.983-.5319a6.4697 6.4697 0 0 0-2.5118-.514c-1.909.008-3.4129 1.215-3.5389 2.826-.082 1.1629.494 2.1078 1.73 2.8278.262.152 1.6799.716 2.2438.892 1.774.552 2.695 1.5419 2.478 2.6969-.197 1.047-1.299 1.7239-2.818 1.7439-1.2039-.046-2.2878-.537-3.1278-1.19l-.141-.11c-.104-.08-.218-.075-.287.03-.05.077-.376.547-.458.67-.077.108-.035.168.045.234.35.293.817.613 1.134.775a6.7097 6.7097 0 0 0 2.8289.727 4.9048 4.9048 0 0 0 2.0759-.354c1.095-.465 1.8029-1.394 1.9449-2.554zM11.9986 1.4009c-2.068 0-3.7539 1.95-3.8329 4.3899h7.6657c-.08-2.44-1.765-4.3899-3.8328-4.3899zm7.8516 22.5981-.08.001-15.7843-.002c-1.074-.04-1.863-.91-1.971-1.991l-.01-.195L1.298 6.2858a.459.459 0 0 1 .45-.494h4.9748C6.8448 2.568 9.1607 0 11.9996 0c2.8388 0 5.1537 2.5689 5.2757 5.7898h4.9678a.459.459 0 0 1 .458.483l-.773 15.5883-.007.131c-.094 1.094-.979 1.9769-2.0709 2.0059z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3 text-sky-700"
+          >
+            <a href="" class="">
+              <svg
+                class="fill-current"
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Walmart</title>
+                <path
+                  d="M21.41818 9.10219c-.22048 0-.39583.12308-.39583.27297l.13393 1.51627c.01478.09132.12669.16185.26197.16185.13555-.00017.24705-.07065.26214-.16185l.13424-1.51627c0-.1499-.17555-.27297-.39645-.27297zM-.00002 10.3184s.59713 2.44699.69242 2.84417c.11123.46362.3117.63419.88954.51913l.37291-1.51718c.0945-.37683.1579-.64553.21866-1.02883h.01065c.04269.3871.10354.65314.18131 1.03017 0 0 .15176.68869.22949 1.05042.07795.36163.29482.5895.86083.46542l.88851-3.3633h-.71735l-.30339 1.45411c-.08155.42325-.15544.75396-.21251 1.14117h-.01022c-.05189-.38347-.11777-.70096-.20072-1.11331l-.31586-1.48197h-.7474l-.3378 1.44462c-.09569.43899-.18528.79337-.2422 1.16745h-.01023c-.05832-.35224-.13599-.7977-.22006-1.22261 0 0-.20074-1.03328-.27115-1.38946zm6.83845 0v3.3633h.68299v-3.3633zm9.6188 0v2.48118c0 .34202.0644.5817.20213.72811.12033.12806.31854.21094.55604.21094.20193 0 .40062-.0383.49426-.07317l-.0088-.53367c-.06968.01711-.1498.03078-.25942.03078-.23265 0-.31068-.149-.31068-.45611v-.94921h.59479v-.64351h-.59481v-.79533zm2.77885 0c-.11446.0027-.24452.08936-.32723.23277-.11062.19096-.09105.40434.03838.47923l1.3799.64254c.0862.03205.20323-.02912.27103-.14597.06814-.11745.0629-.2496-.0088-.3082l-1.24635-.8741c-.03237-.01874-.06877-.02717-.10693-.02627zm4.36427 0c-.03815-.0009-.0745.0075-.1068.02628l-1.2464.8741c-.07112.05846-.07653.1901-.0092.30734.00006.00013.00015.00023.00025.00036.00009.00016.00015.00033.00024.00049.06804.11686.18472.17803.27091.14598l1.38004-.64254c.12997-.0749.14861-.28827.03874-.47923-.08309-.1434-.21333-.23006-.32777-.23277zM5.312 11.0981c-.42444 0-.76136.11916-.94501.22529l.13442.46019c.16808-.10595.43566-.19366.68907-.19366.41954-.0011.48817.23728.48817.39012v.03613c-.9142-.0014-1.49164.31493-1.49164.9598 0 .3937.29399.76266.80512.76266.31466 0 .57778-.12554.73548-.32662h.01545s.10445.4367.67982.26969c-.03022-.18174-.04002-.37546-.04002-.60884v-.89849c0-.57263-.24452-1.07627-1.07086-1.07627zm4.08552 0c-.42739 0-.61944.2166-.7359.40034h-.01016v-.34335h-.65173v2.5266h.68658V12.2c0-.06945.00799-.1429.03223-.2068.05689-.1492.19565-.3237.41725-.3237.27704 0 .40667.2342.40667.57222v1.44h.68585v-1.4996c0-.06636.0091-.14622.02859-.20486.05639-.16969.20602-.30776.41201-.30776.28086 0 .41567.23012.41567.62788v1.38434h.68633v-1.48805c0-.78478-.39845-1.09555-.8483-1.09555-.19922 0-.35646.04996-.49863.13722-.1195.07334-.22655.17753-.32006.3147h-.0101c-.10853-.27228-.36375-.45192-.6963-.45192zm3.7702 0c-.42435 0-.76113.11916-.94495.22529l.13454.46019c.16792-.10595.43572-.19366.689-.19366.41926-.0011.48806.23728.48806.39012v.03613c-.91407-.0014-1.49164.31494-1.49164.9598 0 .3937.29418.76266.8056.76266.31441 0 .57759-.12554.735-.32662h.01557s.10437.4367.67982.26969c-.03027-.18174-.03996-.37546-.03996-.60884v-.89849c0-.57263-.24458-1.07627-1.07104-1.07627zm2.85129 0c-.26292 0-.56205.1697-.68761.53354h-.0191v-.47655h-.6181v2.5266h.70453V12.388c0-.06985.0042-.1307.01527-.1865.0521-.27102.25945-.44425.55696-.44425.08167 0 .1401.0088.20333.018v-.66151c-.05302-.0107-.0893-.01563-.15528-.01563zm4.35946 1.22067c-.01785-.00025-.03513.0026-.05134.0087l-1.3799.6418c-.12943.07519-.149.28868-.03838.47984.11028.1906.30469.28118.43415.20644l1.24634-.87349c.0717-.05929.07696-.19127.0088-.30862l.0006.00025c-.05507-.09558-.14292-.15388-.22027-.15492zm2.07955 0c-.07727.001-.1649.05934-.22012.15491l.00049-.00025c-.06781.11735-.06254.24934.0088.30862l1.2464.87349c.12921.07474.3238-.01584.43458-.20644.10986-.19116.09122-.40466-.03875-.47983l-1.38012-.64181c-.0162-.0061-.03344-.0089-.05128-.0087zm-16.75741.14518v.31519c0 .0466-.00406.09467-.01697.13673-.05286.17506-.23415.32303-.46086.32303-.18901 0-.33916-.1073-.33916-.33422 0-.34707.38204-.443.81699-.44073zm7.85577 0v.31519c0 .0466-.0041.09467-.0169.13673-.05287.17506-.23421.32303-.46093.32303-.18905 0-.3392-.1073-.3392-.33422 0-.34707.38209-.443.81703-.44073zm7.86138.48324c-.13506.00016-.24672.07024-.26148.16137l-.13393 1.5162c0 .15015.17535.27304.39583.27304.2209 0 .39645-.12289.39645-.27303l-.13424-1.51621c-.01509-.09113-.12659-.1612-.26214-.16137z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3 bg-[#0c8484] text-white"
+          >
+            <a href="" class="">
+              <svg
+                class="fill-current"
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>FastAPI</title>
+                <path
+                  d="M12 .0387C5.3729.0384.0003 5.3931 0 11.9988c-.001 6.6066 5.372 11.9628 12 11.9625 6.628.0003 12.001-5.3559 12-11.9625-.0003-6.6057-5.3729-11.9604-12-11.96m-.829 5.4153h7.55l-7.5805 5.3284h5.1828L5.279 18.5436q2.9466-6.5444 5.892-13.0896"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3 bg-[#4007a2] text-white"
+          >
+            <a href="" class="">
+              <svg
+                class="fill-current"
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>.NET</title>
+                <path
+                  d="M24 8.77h-2.468v7.565h-1.425V8.77h-2.462V7.53H24zm-6.852 7.565h-4.821V7.53h4.63v1.24h-3.205v2.494h2.953v1.234h-2.953v2.604h3.396zm-6.708 0H8.882L4.78 9.863a2.896 2.896 0 0 1-.258-.51h-.036c.032.189.048.592.048 1.21v5.772H3.157V7.53h1.659l3.965 6.32c.167.261.275.442.323.54h.024c-.04-.233-.06-.629-.06-1.185V7.529h1.372zm-8.703-.693a.868.829 0 0 1-.869.829.868.829 0 0 1-.868-.83.868.829 0 0 1 .868-.828.868.829 0 0 1 .869.829Z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3 text-red-600"
+          >
+            <a href="" class="">
+              <svg
+                class="fill-current"
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Netflix</title>
+                <path
+                  d="M5.398 0v.006c3.028 8.556 5.37 15.175 8.348 23.596 2.344.058 4.85.398 4.854.398-2.8-7.924-5.923-16.747-8.487-24zm8.489 0v9.63L18.6 22.951c-.043-7.86-.004-15.913.002-22.95zM5.398 1.05V24c1.873-.225 2.81-.312 4.715-.398v-9.22z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3"
+          >
+            <a href="" class="">
+              <svg
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Zara</title>
+                <path
+                  d="M8.562 7l.002.006 2.794 7.621v-7.23h-1.15v-.07h3.96c1.903 0 3.231.976 3.231 2.375 0 1.02-.91 1.868-2.263 2.109l-.249.031.25.026c.821.094 1.473.346 1.935.75l.003.003L19.141 7h.07l.002.006 3.556 9.698H24v.07h-3.918v-.07h1.154l-1.17-3.189h-2.373v.002l.013.037c.094.281.142.576.139.873v1.196c0 .615.271 1.238.79 1.238.304 0 .547-.107.837-.372l.041.038c-.314.332-.695.473-1.266.473-.43 0-.8-.104-1.096-.308l-.056-.04c-.39-.296-.644-.778-.753-1.435l-.018-.106-.018-.16-.002-.028-.654 1.78h.928v.07h-1.942v-.07h.938l.718-1.954v-.005a6.35 6.35 0 01-.013-.346v-.854c0-1.049-.78-1.65-2.14-1.65h-1.337v4.81h1.158v.07H9.433v-.07h1.154l-1.17-3.189H6.172l-1.158 3.154.048-.008c1.521-.262 2.22-1.423 2.23-2.645h.07v2.758H0l5.465-9.377H3.268c-1.822 0-2.646 1.407-2.659 2.81H.54v-2.88h6.634l-.04.07-5.425 9.307h2.854c.071 0 .141-.003.212-.009l.072-.006.09-.01L8.491 7h.07zm9.883 2.095l-1.313 3.576.007.007.067.066c.193.197.347.43.452.684l.007.017h2.375l-1.595-4.35zm-10.648 0l-1.599 4.35h3.194l-1.595-4.35zm6.026-1.698h-1.02v4.427h1.336c1.353 0 1.767-.493 1.767-2.107 0-1.517-.72-2.32-2.083-2.32z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3 text-sky-800"
+          >
+            <a href="" class="">
+              <svg
+                class="fill-current"
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>American Express</title>
+                <path
+                  d="M16.015 14.378c0-.32-.135-.496-.344-.622-.21-.12-.464-.135-.81-.135h-1.543v2.82h.675v-1.027h.72c.24 0 .39.024.478.125.12.13.104.38.104.55v.35h.66v-.555c-.002-.25-.017-.376-.108-.516-.06-.08-.18-.18-.33-.234l.02-.008c.18-.072.48-.297.48-.747zm-.87.407l-.028-.002c-.09.053-.195.058-.33.058h-.81v-.63h.824c.12 0 .24 0 .33.05.098.048.156.147.15.255 0 .12-.045.215-.134.27zM20.297 15.837H19v.6h1.304c.676 0 1.05-.278 1.05-.884 0-.28-.066-.448-.187-.582-.153-.133-.392-.193-.73-.207l-.376-.015c-.104 0-.18 0-.255-.03-.09-.03-.15-.105-.15-.21 0-.09.017-.166.09-.21.083-.046.177-.066.272-.06h1.23v-.602h-1.35c-.704 0-.958.437-.958.84 0 .9.776.855 1.407.87.104 0 .18.015.225.06.046.03.082.106.082.18 0 .077-.035.15-.08.18-.06.053-.15.07-.277.07zM0 0v10.096L.81 8.22h1.75l.225.464V8.22h2.043l.45 1.02.437-1.013h6.502c.295 0 .56.057.756.236v-.23h1.787v.23c.307-.17.686-.23 1.12-.23h2.606l.24.466v-.466h1.918l.254.465v-.466h1.858v3.948H20.87l-.36-.6v.585h-2.353l-.256-.63h-.583l-.27.614h-1.213c-.48 0-.84-.104-1.08-.24v.24h-2.89v-.884c0-.12-.03-.12-.105-.135h-.105v1.036H6.067v-.48l-.21.48H4.69l-.202-.48v.465H2.235l-.256-.624H1.4l-.256.624H0V24h23.786v-7.108c-.27.135-.613.18-.973.18H21.09v-.255c-.21.165-.57.255-.914.255H14.71v-.9c0-.12-.018-.12-.12-.12h-.075v1.022h-1.8v-1.066c-.298.136-.643.15-.928.136h-.214v.915h-2.18l-.54-.617-.57.6H4.742v-3.93h3.61l.518.602.554-.6h2.412c.28 0 .74.03.942.225v-.24h2.177c.202 0 .644.045.903.225v-.24h3.265v.24c.163-.164.508-.24.803-.24h1.89v.24c.194-.15.464-.24.84-.24h1.176V0H0zM21.156 14.955c.004.005.006.012.01.016.01.01.024.01.032.02l-.042-.035zM23.828 13.082h.065v.555h-.065zM23.865 15.03v-.005c-.03-.025-.046-.048-.075-.07-.15-.153-.39-.215-.764-.225l-.36-.012c-.12 0-.194-.007-.27-.03-.09-.03-.15-.105-.15-.21 0-.09.03-.16.09-.204.076-.045.15-.05.27-.05h1.223v-.588h-1.283c-.69 0-.96.437-.96.84 0 .9.78.855 1.41.87.104 0 .18.015.224.06.046.03.076.106.076.18 0 .07-.034.138-.09.18-.045.056-.136.07-.27.07h-1.288v.605h1.287c.42 0 .734-.118.9-.36h.03c.09-.134.135-.3.135-.523 0-.24-.045-.39-.135-.526zM18.597 14.208v-.583h-2.235V16.458h2.235v-.585h-1.57v-.57h1.533v-.584h-1.532v-.51M13.51 8.787h.685V11.6h-.684zM13.126 9.543l-.007.006c0-.314-.13-.5-.34-.624-.217-.125-.47-.135-.81-.135H10.43v2.82h.674v-1.034h.72c.24 0 .39.03.487.12.122.136.107.378.107.548v.354h.677v-.553c0-.25-.016-.375-.11-.516-.09-.107-.202-.19-.33-.237.172-.07.472-.3.472-.75zm-.855.396h-.015c-.09.054-.195.056-.33.056H11.1v-.623h.825c.12 0 .24.004.33.05.09.04.15.128.15.25s-.047.22-.134.266zM15.92 9.373h.632v-.6h-.644c-.464 0-.804.105-1.02.33-.286.3-.362.69-.362 1.11 0 .512.123.833.36 1.074.232.238.645.31.97.31h.78l.255-.627h1.39l.262.627h1.36v-2.11l1.272 2.11h.95l.002.002V8.786h-.684v1.963l-1.18-1.96h-1.02V11.4L18.11 8.744h-1.004l-.943 2.22h-.3c-.177 0-.362-.03-.468-.134-.125-.15-.186-.36-.186-.662 0-.285.08-.51.194-.63.133-.135.272-.165.516-.165zm1.668-.108l.464 1.118v.002h-.93l.466-1.12zM2.38 10.97l.254.628H4V9.393l.972 2.205h.584l.973-2.202.015 2.202h.69v-2.81H6.118l-.807 1.904-.876-1.905H3.343v2.663L2.205 8.787h-.997L.01 11.597h.72l.26-.626h1.39zm-.688-1.705l.46 1.118-.003.002h-.915l.457-1.12zM11.856 13.62H9.714l-.85.923-.825-.922H5.346v2.82H8l.855-.932.824.93h1.302v-.94h.838c.6 0 1.17-.164 1.17-.945l-.006-.003c0-.78-.598-.93-1.128-.93zM7.67 15.853l-.014-.002H6.02v-.557h1.47v-.574H6.02v-.51H7.7l.733.82-.764.824zm2.642.33l-1.03-1.147 1.03-1.108v2.253zm1.553-1.258h-.885v-.717h.885c.24 0 .42.098.42.344 0 .243-.15.372-.42.372zM9.967 9.373v-.586H7.73V11.6h2.237v-.58H8.4v-.564h1.527V9.88H8.4v-.507"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3 text-yellow-500 bg-black"
+          >
+            <a href="" class="">
+              <svg
+                class="fill-current"
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Caterpillar</title>
+                <path
+                  d="M11.901 11.554l.802-4.1.798 4.1zm2.869-6.52h-4.15L8.2 15.884l4.503-3.635 4.695 3.934zm-2.067 8.156l-7.509 6.072H19.95zM24 5.02v2.77h-2.066v11.45h-.882l-2.436-2.04V7.79h-2.057V5.02zM6.872 16.864c.548-.458.642-1.024.642-1.532V13.2h-2.98v2.894a.75.75 0 0 1-.748.751c-.414 0-.722-.336-.722-.75V7.893c0-.414.308-.75.722-.75a.75.75 0 0 1 .749.75v2.913H7.51V7.785c0-1.67-1.092-3.044-3.75-3.047-2.728 0-3.76 1.38-3.76 3.05v8.563c0 1.655 1.314 2.907 2.995 2.907h.922Z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3"
+          >
+            <a href="" class="">
+              <svg
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>American Airlines</title>
+                <path
+                  d="M0 .244h3.264c1.377 0 1.942.563 2.499 1.116.637.58 2.57 3.196 6.657 8.303H7.997c-1.809 0-2.38-.308-3.08-1.375zm10.424 17.072l-2.427-4.013c-.292-.455-.372-.854-.372-1.318 0-.51.217-.79 1.053-1.233.973-.466 2.933-.67 4.954-.67 3.283 0 4.07 1.055 4.405 2.192 0 0-.464-.185-1.554-.185-3.459 0-6.223 1.68-6.223 4.221 0 .534.164 1.006.164 1.006zm4.936-3.417c-2.547.089-5.032 1.869-4.936 3.416l2.7 4.486c.836 1.344 2.215 1.955 3.932 1.955H24l-8.13-9.852a5.55 5.55 0 0 0-.51-.005Z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3 text-red-600"
+          >
+            <a href="" class="">
+              <svg
+                class="fill-current"
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Republic of Gamers</title>
+                <path
+                  d="M21.3906 5.5833c-1.3467.0115-3.4338.19541-5.9375.97657-1.6024.49851-3.916 2.74203-8.22459 6.90823-.56973.3204-2.67017-.8912-3.88085-1.461 0 0 1.9929 3.1699 2.70507 4.0957 1.06825 1.46 3.02735 2.3145 3.02735 2.3145-.17804-.1781-1.53019-1.6029-1.92188-2.4219-.24926-.3917.03418-.9624 1.95703-2.3867C10.86 12.3268 17.0569 7.09358 23.0391 5.66924c0 0-.601-.09488-1.6485-.08593V5.5833ZM24 7.7708c-2.0653.21366-4.06.81878-5.9473 1.70899C14.2783 11.2602 7.9043 15.8177 7.9043 15.8177c.28486.178.5706.3556.85546.498 3.06234 1.3531 7.58484 2.1716 8.43944 1.8867 2.3858-.7833 5.056-5.8026 5.875-8.1172 0 0-2.4933.9968-5.0215 2.1719-2.1009.9971-4.414 2.1368-4.414 2.1368l5.875-1.7813s-1.5676 3.7036-3.6328 4.1309c-2.0653.4273-5.6973-1.0332-5.6973-1.0332.2849-.2493 4.1302-3.0629 13.1035-6.73051.3917-.28487.6417-.74608.7129-1.20898V7.7708ZM0 11.2942c.35608.9615.8194 1.8525 1.35352 2.7071.64094.819 3.27477 1.4952 3.63086 1.5664C3.34638 14.4282 0 11.2942 0 11.2942Z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3"
+          >
+            <a href="" class="">
+              <svg
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Bank of America</title>
+                <path
+                  d="M15.194 7.57c.487-.163 1.047-.307 1.534-.451-1.408-.596-3.176-1.227-4.764-1.625-.253.073-1.01.271-1.534.434.541.162 2.328.577 4.764 1.642zm-8.896 6.785c.577.343 1.19.812 1.786 1.209 3.952-3.068 7.85-5.432 12.127-6.767-.596-.307-1.119-.578-1.787-.902-2.562.65-6.947 2.4-12.126 6.46zm-.758-6.46c-2.112.974-4.331 2.31-5.54 3.085.433.199.866.361 1.461.65 2.671-1.805 4.764-2.905 5.594-3.266-.595-.217-1.154-.361-1.515-.47zm8.066.234c-.686-.379-3.068-1.263-4.71-1.642-.487.18-1.173.451-1.642.65.595.162 2.815.758 4.71 1.714.487-.235 1.173-.523 1.642-.722zm-3.374 1.552c-.56-.27-1.173-.523-1.643-.74-1.425.704-3.284 1.769-5.63 3.447.505.27 1.047.595 1.624.92 1.805-1.335 3.627-2.598 5.649-3.627zm1.732 8.825c3.79-3.249 9.113-6.407 12.036-7.544a48.018 48.018 0 00-1.949-1.155c-3.771 1.246-8.174 4.007-12.108 7.129.667.505 1.371 1.028 2.02 1.57zm2.851-.235h-.108l-.18-.27h-.109v.27h-.072v-.596h.27c.055 0 .109 0 .145.036.054.019.072.073.072.127 0 .108-.09.162-.198.162zm-.289-.343c.09 0 .199.018.199-.09 0-.072-.072-.09-.144-.09h-.163v.18zm-.523.036c0-.289.235-.523.541-.523.307 0 .542.234.542.523a.543.543 0 01-.542.542.532.532 0 01-.54-.542m.107 0c0 .235.199.433.451.433a.424.424 0 100-.848c-.27 0-.45.199-.45.415"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3"
+          >
+            <a href="" class="">
+              <svg
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Embarcadero</title>
+                <path
+                  d="M12 0a11.963 11.963 0 0 0-8.485 3.515A11.963 11.963 0 0 0 0 12.001c0 3.313 1.344 6.311 3.515 8.484A11.96 11.96 0 0 0 12 24a11.96 11.96 0 0 0 8.485-3.515A11.968 11.968 0 0 0 24 12.001c0-3.315-1.344-6.314-3.515-8.486A11.963 11.963 0 0 0 12 0zm.052 4.401c1.233 0 2.344.222 3.332.664.988.443 1.804 1.142 2.449 2.096.58.842.956 1.818 1.128 2.93.1.65.14 1.587.122 2.811H8.764c.058 1.421.552 2.418 1.482 2.99.565.355 1.246.533 2.042.533.844 0 1.53-.217 2.057-.65.288-.234.542-.56.762-.975h3.783c-.1.84-.558 1.694-1.374 2.56-1.269 1.378-3.045 2.067-5.33 2.067-1.886 0-3.549-.58-4.99-1.743-1.442-1.162-2.162-3.053-2.162-5.672 0-2.455.65-4.337 1.951-5.646C8.286 5.056 9.975 4.4 12.052 4.4zm.001 3.055c-.95 0-1.688.27-2.211.81-.524.54-.852 1.27-.987 2.192h6.382c-.067-.983-.396-1.73-.987-2.238-.59-.51-1.323-.764-2.197-.764Z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3"
+          >
+            <a href="" class="">
+              <svg
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Coveralls</title>
+                <path
+                  d="M0 12v12h24V0H0zm13.195-6.187l1.167 3.515 2.255.005c1.238.005 2.916.019 3.727.037l1.472.028-2.968 2.152c-1.63 1.181-2.976 2.18-2.99 2.212-.01.033.487 1.627 1.106 3.54.619 1.917 1.12 3.487 1.116 3.492-.005.01-1.35-.947-2.986-2.119-1.636-1.177-3-2.147-3.033-2.161-.028-.01-1.411.947-3.07 2.138-1.655 1.185-3.02 2.151-3.024 2.142-.004-.005.497-1.575 1.116-3.492.619-1.913 1.115-3.507 1.106-3.54-.014-.032-1.36-1.03-2.99-2.212L2.23 9.398l1.472-.028c.811-.018 2.49-.032 3.727-.037l2.254-.005 1.168-3.515a512.54 512.54 0 011.171-3.516c.005 0 .53 1.58 1.172 3.516z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="animate-bounce flex w-20 shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3"
+          >
+            <a href="" class="">
+              <svg
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Maserati</title>
+                <path
+                  d="M9.678 21.213h4.67v.909h-4.67v-.909zm.87 2.787h2.93v-1.409h-2.93V24zm-.844-5.313c.575.523.881 1.28.83 2.056h2.944a2.575 2.575 0 0 1 .818-2.056H9.704zm-3.052-2.17v.683h10.696v-.683H6.652zm.478 3.087a3.833 3.833 0 0 0 1.74-.917H7.009l.121.917zm9.74 0l.121-.917h-1.86c.49.451 1.089.768 1.739.917zm-8.666-4.556A73.645 73.645 0 0 0 5.913 8.63c.644.102 1.283.237 1.913.405A18.885 18.885 0 0 0 3.51 5.583c1.226 2.378 2.378 5.987 2.965 9.465h1.73zm9.326 0c.587-3.478 1.74-7.087 2.961-9.465a18.877 18.877 0 0 0-4.308 3.452c.63-.169 1.268-.304 1.913-.405a65.966 65.966 0 0 0-2.292 6.418h1.726zM6.087 16.17h11.83v-.679H6.087v.679zm5.135-1.144c.312-.74.569-1.5.77-2.278.203.777.462 1.538.773 2.278h2.052c-1.743-2.87-2.234-6.665-2.343-10-.009-.343.13-.43.46-.283l1.053.474A15.501 15.501 0 0 1 11.991 0 15.494 15.494 0 0 1 10 5.217l1.052-.474c.33-.152.457-.06.457.283-.109 3.313-.6 7.109-2.34 10h2.053zm-5.135 3.191h11.83v-.678H6.087v.678z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="flex w-20 animate-bounce shadow-md justify-center p-3 rounded-lg shadow-sky-950 mr-3"
+          >
+            <a href="" class="">
+              <svg
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Macy's</title>
+                <path
+                  d="M12.015.624L9.19 9.293H0l7.445 5.384-2.819 8.673L12 17.986l7.422 5.393-2.835-8.713L24 9.292h-9.162L12.015.622v.002z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="flex w-20 shadow-md animate-bounce justify-center p-3 rounded-lg shadow-sky-950 mr-3 text-red-600"
+          >
+            <a href="">
+              <svg
+                class="fill-current"
+                width="60"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>H&amp;M</title>
+                <path
+                  d="M16.866 4.565c.871-.429 1.303-.372 1.313.061.012.565-.071 1.313-.131 1.857-.323 2.947-.864 5.356-.906 8.383 1.424-3.686 2.619-6.248 4.156-9.403.488-1.004.799-.818 1.2-.996 1.563-.695 1.622-.268 1.417.581-.758 3.15-2.695 13.068-2.992 14.595-.086.442-.566.255-.691.082-.556-.769-1.183-.781-1.112-1.293.348-2.546 1.603-8.934 1.93-10.439-1.669 3.42-3.398 7.694-4.286 10.118-.189.515-.531.477-.745.1-.3-.529-.883-.799-.979-1.424-.306-1.987.348-5.776.439-8.172-.908 2.618-2.433 7.701-3.101 9.997-.276.95-1.193.795-.949-.131 1.015-3.854 3.201-10.67 4.148-13.121.222-.576.805-.556 1.289-.795Zm-5.535-.474c.276.067.254.393.085.838-.499 1.314-1.19 3.04-1.981 5.076.497-.057.767-.076.767-.076.713-.088.846.269.645.648-.16.303-.353.101-1.02 1.096-.376.561-.99.709-1.332.784-.821 2.175-1.702 4.602-2.557 7.188-.125.377-.489.295-.598.142-.402-.562-.698-.58-1.01-1.034-.037-.074-.11-.173-.066-.354.229-.936.837-2.859 1.762-5.392-1.165.253-2.426.524-2.947.645-.624 1.651-1.234 3.308-1.811 4.944-.358 1.015-1.29.819-.963-.141.521-1.528 1.096-3.115 1.673-4.654-.646-.069-.864-.525-1.225-.906-.139-.147-.443-.126-.592-.332-.267-.371-.241-.536.377-.714.806-.233 1.617-.449 2.432-.649 1.044-2.694 1.987-5.006 2.49-6.239.388-.951 1.387-.862 1.008.075-.772 1.906-1.563 3.885-2.344 5.893.963-.217 1.931-.409 2.904-.576.713-1.831 1.462-3.648 2.247-5.449.055-.126.215-.304.381-.332.525-.09 1.379-.552 1.675-.481ZM9.543 16.426c.082-.05.163-.111.244-.178-.062-.183-.123-.366-.183-.55-.061.078-.12.157-.179.237-.349.479-.142.65.118.491Zm.465-2.275c.433-.489-.423-.693-.226.054.011.042.025.092.04.146.063-.065.125-.132.186-.2Zm.45 1.473c.429-.372.838-.003.414.624a6.955 6.955 0 0 1-.307.424c.045.128.091.255.14.381.219.562-.357.703-.542.237a7.29 7.29 0 0 1-.05-.129c-.35.31-.754.505-1.186.37-.711-.221-.892-1.222-.228-1.993.266-.309.466-.524.634-.695-.041-.133-.081-.267-.118-.401-.087-.312-.164-.675.148-1.046.586-.695 1.945-.078 1.257.992-.165.258-.359.501-.561.748.07.221.14.441.212.661.061-.06.123-.117.187-.173Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="text-center w-full lg:px-20">
+          <p class="text-xl mt-7 pb-5 lg:text-lg">and many more!</p>
+          <h1 class="text-2xl font-semibold text-sky-950">
+            MyUS Shipping Rates vs. competitors in the US
+          </h1>
+          <p class="text-xl pt-5 lg:text-lg lg:text-slate-700">
+            With MyUS TruePrice, you get guaranteed upfront pricing with no
+            hidden fees and no surprises.* As the first and largest service of
+            its kind, MyUS can negotiate the best international shipping rates
+            for its members.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Gallery Section End -->
+
+    <!-- Table Section Start -->
+    <section class="pb-20">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full overflow-y-scroll">
+            <table
+              class="border-collapse border border-slate-400 w-full text-center text-xl"
+            >
+              <thead>
+                <tr>
+                  <th class="border border-slate-300 ...">
+                    1. lb. rates from the US to:
+                  </th>
+                  <th class="border border-slate-300 text-sky-950 italic ...">
+                    My <span class="text-red-600">US</span>
+                  </th>
+                  <th class="border border-slate-300 ...">Stackry</th>
+                  <th class="border border-slate-300 ...">Shipito</th>
+                  <th class="border border-slate-300 ...">Reship</th>
+                  <th class="border border-slate-300 ...">Fishisfast</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-slate-300 ...">Europe</td>
+                  <td class="border border-slate-300 ...">$12.99</td>
+                  <td class="border border-slate-300 ...">$16.97</td>
+                  <td class="border border-slate-300 ...">$18.17 + tax</td>
+                  <td class="border border-slate-300 ...">$24.00</td>
+                  <td class="border border-slate-300 ...">$32.00</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Asia</td>
+                  <td class="border border-slate-300 ...">$12.72</td>
+                  <td class="border border-slate-300 ...">$73.99</td>
+                  <td class="border border-slate-300 ...">$18.58 + tax</td>
+                  <td class="border border-slate-300 ...">$27.25</td>
+                  <td class="border border-slate-300 ...">$32.00</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Middle East</td>
+                  <td class="border border-slate-300 ...">$13.99</td>
+                  <td class="border border-slate-300 ...">$38.97</td>
+                  <td class="border border-slate-300 ...">$25.30 + tax</td>
+                  <td class="border border-slate-300 ...">$24.79</td>
+                  <td class="border border-slate-300 ...">$63.00</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Oceania</td>
+                  <td class="border border-slate-300 ...">$16.99</td>
+                  <td class="border border-slate-300 ...">$34.97</td>
+                  <td class="border border-slate-300 ...">$20.00 + tax</td>
+                  <td class="border border-slate-300 ...">$35.89</td>
+                  <td class="border border-slate-300 ...">$84.00</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">North America</td>
+                  <td class="border border-slate-300 ...">$17.26</td>
+                  <td class="border border-slate-300 ...">$23.97</td>
+                  <td class="border border-slate-300 ...">$24.59 + tax</td>
+                  <td class="border border-slate-300 ...">$37.66</td>
+                  <td class="border border-slate-300 ...">$28.00</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">South America</td>
+                  <td class="border border-slate-300 ...">$25.50</td>
+                  <td class="border border-slate-300 ...">$110.99</td>
+                  <td class="border border-slate-300 ...">$23.93 + tax</td>
+                  <td class="border border-slate-300 ...">$41.31</td>
+                  <td class="border border-slate-300 ...">$15.00</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Africa</td>
+                  <td class="border border-slate-300 ...">$17.03</td>
+                  <td class="border border-slate-300 ...">$116.97</td>
+                  <td class="border border-slate-300 ...">$19.90 + tax</td>
+                  <td class="border border-slate-300 ...">$37.23</td>
+                  <td class="border border-slate-300 ...">$38.00</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-300 ...">Caribbean</td>
+                  <td class="border border-slate-300 ...">$5.20</td>
+                  <td class="border border-slate-300 ...">$85.97</td>
+                  <td class="border border-slate-300 ...">$12.72 + tax</td>
+                  <td class="border border-slate-300 ...">$54.74</td>
+                  <td class="border border-slate-300 ...">$34.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="text-center w-full mt-10 lg:px-20">
+            <a
+              href=""
+              class="bg-yellow-500 rounded-sm border-[1px] border-black px-5 py-2 font-semibold hover:opacity-80"
+              >Sign up Now, I'ts FREE</a
+            >
+            <div class="lg:w-5/6 lg:mx-auto lg:text-xs">
+              <p class="pt-10 italic">
+                * Shipping rates above were sampled from the following
+                countries: United Kingdom, Singapore, Saudi Arabia, Australia,
+                Canada, Brazil, South Africa, & the Bahamas.
+              </p>
+              <p class="pt-3 pb-28">
+                * Prices are subject to change at any time without notice. These
+                rates were last updated October 20th, 2024. Package example is
+                14x10x6". Prices shown in USD.
+              </p>
+            </div>
+            <h1
+              class="text-xl font-semibold text-sky-95 pb-7 text-sky-950 lg:text-2xl"
+            >
+              Features You Will Love
+            </h1>
+            <div
+              class="font-medium text-lg w-full lg:leading-10 text-left lg:columns-2 lg:w-5/6 lg:mx-auto"
+            >
+              <div class="flex items-center lg:flex-none mb-2 lg:mb-0">
+                <i data-feather="check-circle" class="text-sky-950"></i>
+                <p class="ps-2">Access to thousand of US and UK stores</p>
+              </div>
+              <div class="flex items-center lg:flex-none mb-2 lg:mb-0">
+                <i data-feather="check-circle" class="text-sky-950"></i>
+                <p class="ps-2">US sales tax-free shopping</p>
+              </div>
+              <div class="flex items-center lg:flex-none mb-2 lg:mb-0">
+                <i data-feather="check-circle" class="text-sky-950"></i>
+                <p class="ps-2">Discounted shipping rates</p>
+              </div>
+              <div class="flex items-center lg:flex-none mb-2 lg:mb-0">
+                <i data-feather="check-circle" class="text-sky-950"></i>
+                <p class="ps-2">Superior packing & top rates customer care</p>
+              </div>
+              <div class="flex items-center lg:flex-none mb-2 lg:mb-0">
+                <i data-feather="check-circle" class="text-sky-950"></i>
+                <p class="ps-2">Exclusive savings/coupons</p>
+              </div>
+              <div class="flex items-center lg:flex-none mb-2 lg:mb-0">
+                <i data-feather="check-circle" class="text-sky-950"></i>
+                <p class="ps-2">Package Consolidation saves you money</p>
+              </div>
+            </div>
+            <div class="text-center mt-10">
+              <a href="" class="bg-sky-950 p-3 text-white hover:opacity-80"
+                >See All Benefits</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Table Section End -->
+
+    <!-- Counting section Start -->
+    <!-- <section class="pb-32 bg-sky-950">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center pt-16">
+            <div class="text-center text-white">
+              <h1
+                class="text-4xl font-bold leading-10 flex flex-wrap justify-center"
+              >
+                Over 27 Million Packages Delivered and Counting!
+              </h1>
+              <div class="flex justify-between items-center mt-10">
+                <div class="flex mt-5 text-left">
+                  <i class="text-yellow-500" data-feather="star"></i>
+                  <p class="ms-3 text-2xl font-bold">
+                    4.4/5 <span class="block text-yellow-500">Star Rating</span>
+                  </p>
+                </div>
+                <div class="flex mt-5 text-left">
+                  <i class="text-yellow-500" data-feather="message-square"></i>
+                  <p class="ms-3 text-2xl font-bold">
+                    4.4/5 <span class="block text-yellow-500">Star Rating</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Counting section End -->
+
+    <section class="bg-red-600 pb-5">
+      <div class="container">
+        <div class="flex flex-wrap justify-between items-center py-10">
+          <div class="w-full text-center">
+            <h1 class="text-white text-3xl font-semibold pb-5">
+              Helping International shoppers buy and ship what they love from
+              the US and the UK.
+            </h1>
+            <h3 class="text-white pb-7 text-xl font-normal">
+              We've shipped more than 27 million packages worldwide, and last
+              year alone, our members saved $67.5 million
+            </h3>
+            <a
+              href=""
+              class="bg-yellow-500 px-7 py-2 rounded-sm border border-black text-black font-semibold"
+              >Sign Up</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-5">
+      <div class="container">
+        <div class="flex flex-wrap justify-between items-center py-10">
+          <div class="w-full text-center">
+            <h3 class="text-sky-950 font-semibold pb-7 text-xl font-normal">
+              Ready to Shop & Ship?
+            </h3>
+            <p class="pb-5">
+              All you need is a membership to instantly get your MyUS address.
+            </p>
+            <a
+              href=""
+              class="bg-yellow-500 px-7 py-2 rounded-sm border border-black text-black font-semibold"
+              >Sign Up</a
+            >
+            <p class="pt-10 text-xl">
+              How much will it cost to ship a package from the United States or
+              the United Kingdom to your door? Use our international shipping
+              calculator to find the best rates! <br />
+              <br />
+              Sign up to receive a US and UK suite address, and start shopping
+              your favorite US and UK brands and websites today. <br />
+              <br />
+              MyUS ships to more than 220 countries and territories, with happy
+              members around the globe--from Saudi Arabia, Australia, Japan,
+              Angola and Canada to the United Arab Emirates, South Africa,
+              India, Brazil and beyond
+            </p>
+            <br />
+            <p class="text-xs pb-10">
+              *Consolidation savings are based on MyUS members who consolidated
+              two or more packages into one shipment. Cost savings are based on
+              price of shipping each package individually vs. shipping them
+              together. <br />
+              <br />
+              **MyUS.com provides an independent service and is not affiliated
+              with these retailers. All retailer logos appearing on this site
+              are the property of their respective owners.
+            </p>
+            <div class="lg:text-left">
+              <div class="lg:hidden">
+                <h3 class="pb-3">MyUS.com</h3>
+                <p>4299 Express Lane</p>
+                <p>Sarasota, FL 34249 USA</p>
+                <p class="pb-5">WhatApp Message: 1.941.225.7374</p>
+                <p class="pb-1">Local Time: 00:51</p>
+              </div>
+              <div class="flex justify-center lg:hidden">
+                <p class="border px-5 py-2">phone: 1.941.227.4444</p>
+                <p class="border px-5 py-2">Fax: 1.941.827.2985</p>
+              </div>
+              <div
+                class="columns-2 lg:columns-4 text-left pt-7 leading-10 text-sky-950 lg:text-sm"
+              >
+                <div class="block hidden lg:block">
+                  <h3 class="lg:text-lg pb-5">MyUS.com</h3>
+                  <p>4299 Express Lane</p>
+                  <p>Sarasota, FL 34249 USA</p>
+                  <p class="pb-5">WhatApp Message: 1.941.225.7374</p>
+                  <p class="">Local Time: 00:51</p>
+                </div>
+                <a href="" class="block">How MyUS Works</a>
+                <a href="" class="block">Why Choose MyUS</a>
+                <a href="" class="block">Shipping & Pricing for your country</a>
+                <a href="" class="block">Sign Up</a>
+                <a href="" class="block">Exchanges Rates</a>
+                <a href="" class="block">What You Cannot Ship</a>
+                <a href="" class="block">Frequently Asked Questions</a>
+                <a href="" class="block">Blog</a>
+                <a href="" class="block">Your Privacy Rights</a>
+                <a href="" class="block">About MyUS</a>
+                <a href="" class="block">MyUS Reviews</a>
+                <a href="" class="block">News & Press</a>
+                <a href="" class="block">Careers at MyUS.com</a>
+                <a href="" class="block">Partner with MyUS</a>
+                <a href="" class="block">Contact Us</a>
+                <a href="" class="block">Sitemap</a>
+                <a href="" class="block">Scholarships</a>
+                <a href="" class="block">Top Stores</a>
+                <div class="block hidden">
+                  <a href="" class="block">Facebook</a>
+                  <a href="" class="block">Instagram</a>
+                  <a href="" class="block">X (formerly Twitter)</a>
+                  <a href="" class="block">Get the MyUS app</a>
+                  <a href="" class="block">Get the MyUS Shopping app</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-5 bg-sky-950 pt-5">
+      <div class="container">
+        <div class="text-center text-white">
+          <div class="">
+            <div class="lg:hidden">
+              <a href="">Facebook</a> <br />
+              <a href="">Instagram</a> <br />
+              <a href="">X (formerly Twitter)</a> <br />
+              <a href="">Get the MyUS app</a> <br />
+              <a href="" class="">Get the MyUS Shopping app</a> <br />
+            </div>
+            <div class="lg:flex lg:items-center hidden lg:block">
+              <p>© 2023 MyUS.com. All rights reserved | XML Sitemap</p>
+            </div>
+            <div class="pt-5 lg:hidden text-center">
+              © 2023 MyUS.com. All rights reserved XML Sitemap
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-5">
+      <div class="container">
+        <div class="w-full pt-5">
+          <p>
+            We use cookies to offer better online experiences. By visiting and
+            using MyUS.com, you consent to our use of cookies. Learn about your
+            options, rights and more by reading our Terms & Conditions, Terms of
+            Use, and Privacy Policy.
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
